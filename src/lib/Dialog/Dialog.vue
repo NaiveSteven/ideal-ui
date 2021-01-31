@@ -23,7 +23,7 @@
 
 <script lang="ts" setup="props, context">
 import { SetupContext } from 'vue';
-import Button from "./Button.vue";
+import Button from "../Button/Button.vue";
 declare const props: {
   visible: boolean;
   closeOnClickOverlay: boolean; 
