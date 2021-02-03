@@ -11,7 +11,7 @@
 <script lang="ts">
 import {
   Button
-} from "../lib/index";
+} from "../../lib/index";
 export default {
   components: {
     Button

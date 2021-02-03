@@ -12,7 +12,7 @@
 import {
   Tabs,
   Tab
-} from "../lib/index";
+} from "../../lib/index";
 import {
   ref
 } from 'vue'
