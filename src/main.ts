@@ -1,5 +1,4 @@
-import "./lib/ideal.scss";
-import "./index.scss";
+import "./styles/index.scss";
 import { createApp } from "vue";
 import App from "./App.vue";
 import { router } from "./router";
