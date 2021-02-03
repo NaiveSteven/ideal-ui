@@ -10,13 +10,13 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #0d6efd !default;
+$blue:    #2db7f5 !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #fadb14 !default;
+$red:     #f50 !default;
+$orange:  #fa0 !default;
+// $yellow:  #fadb14 !default;
 $green:   #52c41a !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
@@ -25,7 +25,7 @@ $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $yellow !default;
+$warning:       $orange !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
@@ -74,9 +74,9 @@ $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 // 链接
-$link-color:                              $primary !default;
+$link-color:                              $blue !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        darken($link-color, 10%) !default;
 $link-hover-decoration:                   underline !default;
 
 // body
@@ -179,19 +179,19 @@ $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 // 按钮
 // 按钮基本属性
 $btn-font-weight:             400;
-$btn-padding-y:               .375rem !default;
-$btn-padding-x:               .75rem !default;
+$btn-padding-y:               .25rem !default;
+$btn-padding-x:               .5rem !default;
 $btn-font-family:             $font-family-base !default;
 $btn-font-size:               $font-size-base !default;
 $btn-line-height:             $line-height-base !default;
 
 //不同大小按钮的 padding 和 font size
-$btn-padding-y-sm:            .25rem !default;
-$btn-padding-x-sm:            .5rem !default;
+$btn-padding-y-sm:            .15rem !default;
+$btn-padding-x-sm:            .3rem !default;
 $btn-font-size-sm:            $font-size-sm !default;
 
-$btn-padding-y-lg:            .5rem !default;
-$btn-padding-x-lg:            1rem !default;
+$btn-padding-y-lg:            .375rem !default;
+$btn-padding-x-lg:            .75rem !default;
 $btn-font-size-lg:            $font-size-lg !default;
 
 // 按钮边框
@@ -204,7 +204,7 @@ $btn-disabled-opacity:        .65 !default;
 // 链接按钮
 $btn-link-color:              $link-color !default;
 $btn-link-hover-color:        $link-hover-color !default;
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-disabled-color:     $gray-500 !default;
 
 
 // 按钮 radius
@@ -212,7 +212,6 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 // menu
 $menu-border-width:            $border-width !default;
@@ -228,7 +227,6 @@ $menu-item-active-border-width: 2px !default;
 $menu-item-disabled-color:     $gray-600 !default;
 
 //sub-menu
-//submenu
 $submenu-box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
 
 //input
@@ -286,3 +284,6 @@ $progress-bg:                       $gray-200 !default;
 $progress-border-radius:            $border-radius !default;
 $progress-bar-color:                $white !default;
 $progress-bar-transition:           width .6s ease !default;
+
+// spin
+$spin-opacity: 0.35;

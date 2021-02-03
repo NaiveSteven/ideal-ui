@@ -1,5 +1,11 @@
 // config
 @import "variables";
 
-//layout
+// layout
 @import "reboot";
+
+// button
+@import "../lib/Button/style";
+
+// mixin
+@import "mixin";

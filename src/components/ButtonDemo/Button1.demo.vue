@@ -3,9 +3,10 @@
 </demo>
 <template>
 <div>
-  <Button>你好</Button>
+  <Button @click="click">你好</Button>
   <Button theme="link">你好</Button>
   <Button theme="text">你好</Button>
+  <Button theme="primary">你好</Button>
 </div>
 </template>
 
@@ -16,6 +17,14 @@ import {
 export default {
   components: {
     Button
+  },
+  setup() {
+    const click = () => {
+      console.log('111');
+    };
+    return {
+      click,
+    };
   }
 }
 </script>
