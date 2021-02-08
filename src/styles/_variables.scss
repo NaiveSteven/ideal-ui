@@ -212,6 +212,13 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
+// switch
+$switch-height: 22px;
+$switch-width: $switch-height * 2;
+$switch-radius: $switch-width / 2;
+
+$switch-oval-height: $switch-height - 4px;
+$switch-oval-radius: $switch-oval-height / 2;
 
 // menu
 $menu-border-width:            $border-width !default;

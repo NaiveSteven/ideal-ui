@@ -1,0 +1,47 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.ideal-switch {
+  height: $switch-height;
+  width: $switch-width;
+  border: none;
+  background: #bfbfbf;
+  border-radius: $switch-radius;
+  position: relative;
+
+  > span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $switch-oval-height;
+    width: $switch-oval-height;
+    background: $white;
+    border-radius: $switch-oval-radius;
+    transition: all 250ms;
+  }
+
+  &.ideal-checked {
+    background: $blue;
+
+    > span {
+      left: calc(100% - #{$switch-oval-height} - 2px);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    > span {
+      width: $switch-oval-height + 4px;
+    }
+  }
+
+  &.ideal-checked:active {
+    > span {
+      width: $switch-oval-height + 4px;
+      margin-left: -4px;
+    }
+  }
+}
