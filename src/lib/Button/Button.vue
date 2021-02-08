@@ -6,13 +6,10 @@
 </template>
 <script lang="ts" setup="props, context">
 import { computed } from "vue";
-declare const props: {
-  theme?: 'button' | 'text' | 'link';
-  size?: 'normal' | 'big' | 'small';
-  level?: 'normal' | 'main' | 'danger';
-  disabled: boolean;
-  loading: boolean;
-}
+export type theme = 'button' | 'text' | 'link';
+export type size = 'normal' | 'big' | 'small';
+export type level = 'normal' | 'main' | 'danger';
+
 export default {
   props: {
     theme: {

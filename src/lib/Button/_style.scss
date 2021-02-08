@@ -54,16 +54,16 @@
       background: darken($white, 5%);
     }
   }
-  &.ideal-theme-primary {
-    border-color: transparent;
-    box-shadow: none;
-    background: $blue;
-    color: $white;
-    &:hover,
-    &:focus {
-      background: lighten($blue, 10%);
-    }
-  }
+  // &.ideal-theme-primary {
+  //   border-color: transparent;
+  //   box-shadow: none;
+  //   background: $blue;
+  //   color: $white;
+  //   &:hover,
+  //   &:focus {
+  //     background: lighten($blue, 10%);
+  //   }
+  // }
   &.ideal-theme-button {
     &.ideal-level-main {
       background: $blue;
@@ -127,8 +127,14 @@
     }
   }
   &.ideal-loading {
+    cursor: auto;
     background-color: $white;
     opacity: $spin-opacity;
+    &:hover,
+    &:focus {
+      color: $gray-800;
+      border-color: lighten($blue, 35%);
+    }
   }
   > .ideal-loadingIndicator{
     width: 14px;
