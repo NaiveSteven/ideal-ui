@@ -50,8 +50,13 @@ $gray-100: #eee;
   &.error {
     > input {
       border-color: $red;
+    
+      &:hover {
+        border-color: $red;
+      }
 
       &:focus {
+        border-color: $red;
         box-shadow: inset 0 0 3px 0px $red;
         outline: none;
       }
