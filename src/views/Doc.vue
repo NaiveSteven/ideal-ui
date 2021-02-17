@@ -1,78 +1,78 @@
 <template>
-<div class="layout">
-  <Topnav toggleMenuButtonVisible class="nav" />
-  <div class="content">
-    <aside v-if="menuVisible">
-      <h3>文档</h3>
-      <ol>
-        <li>
-          <router-link to="/doc/intro">介绍</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/install">安装</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/get-started">开始使用</router-link>
-        </li>
-      </ol>
-      <h3>组件列表</h3>
-      <ol>
-        <li>
-          <router-link to="/doc/switch">Switch 组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/button">Button 组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/dialog">Dialog 组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/tabs">Tabs 组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/input">Input 组件</router-link>
-        </li>
-      </ol>
-    </aside>
-    <main>
-      <router-view />
-    </main>
+  <div class="layout">
+    <Topnav toggleMenuButtonVisible class="nav" />
+    <div class="content">
+      <aside v-if="menuVisible">
+        <h3>文档</h3>
+        <ol>
+          <li>
+            <router-link to="/doc/intro">介绍</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/install">安装</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/get-started">开始使用</router-link>
+          </li>
+        </ol>
+        <h3>组件列表</h3>
+        <ol>
+          <li>
+            <router-link to="/doc/switch">Switch 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/button">Button 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/dialog">Dialog 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/input">Input 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/table">Table 组件</router-link>
+          </li>
+        </ol>
+      </aside>
+      <main>
+        <router-view />
+      </main>
+    </div>
   </div>
-</div>
 </template>
 
 <script lang="ts">
 import Topnav from "../components/Topnav.vue";
-import {
-  inject,
-  Ref
-} from "vue";
+import { inject, Ref } from "vue";
 export default {
   components: {
-    Topnav
+    Topnav,
   },
   setup() {
-    const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
+    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
     return {
-      menuVisible
+      menuVisible,
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-$aside-index : 10;
+$aside-index: 10;
 
 .layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
 
-  >.nav {
+  > .nav {
     flex-shrink: 0;
   }
 
-  >.content {
+  > .content {
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 156px;
@@ -86,15 +86,15 @@ $aside-index : 10;
 .content {
   display: flex;
 
-  >aside {
+  > aside {
     flex-shrink: 0;
 
-    >h3 {
+    > h3 {
       padding: 4px 16px;
     }
   }
 
-  >main {
+  > main {
     flex-grow: 1;
     padding: 16px;
     background: white;
@@ -112,20 +112,20 @@ aside {
   height: 100%;
   z-index: $aside-index;
 
-  >h2 {
+  > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
   }
 
-  >ol {
+  > ol {
     padding: 0;
     margin: 0;
 
-    >li {
+    > li {
       padding: 0;
       margin: 0;
 
-      >a {
+      > a {
         display: block;
         padding: 4px 24px;
         text-decoration: none;
