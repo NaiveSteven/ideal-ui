@@ -1,4 +1,4 @@
-# Gulu UI for Vue 3
+# ideal-ui for Vue 3
 
 [点击查看官网]
 
