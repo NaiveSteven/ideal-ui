@@ -39,6 +39,7 @@
 
 <script lang="ts">
 import { Table } from "../../lib/index";
+import {h} from "vue"
 export default {
   components: {
     Table,
@@ -63,6 +64,17 @@ export default {
         text: "分数",
         field: "score",
       },
+      // {
+      //   text: 'nihao',
+      //   render: (a, b) => {
+      //     console.log(a,'aaaaaaa');
+      //     console.log(b,'bbbbbbbbb')
+      //     return ('asdfsadf');
+      //     // return (
+      //     //   h('span',{}, '222222222')
+      //     // );
+      //   }
+      // }
     ];
     const dataSource = [
       {
@@ -84,6 +96,11 @@ export default {
         id: "4",
         name: "aaaa",
         score: 100,
+      },
+      {
+        id: "5",
+        name: 'bbbb',
+        score: 'asdfsdf',
       },
     ];
     return {

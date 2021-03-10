@@ -55,6 +55,7 @@
         <tbody>
           <template v-for="(item, index) in dataSource" :key="item.id">
             <tr>
+              <!-- expand -->
               <td
                 v-if="expendField"
                 :style="{ width: '50px' }"
@@ -66,6 +67,7 @@
                   @click="expendItem(item.id)"
                 />
               </td>
+              <!-- checkbox -->
               <td
                 v-if="checkable"
                 :style="{ width: '50px' }"
@@ -77,15 +79,17 @@
                   :checked="inSelectedItems(item)"
                 />
               </td>
+              <!-- 序号 -->
               <td :style="{ width: '50px' }" v-if="numberVisible">
                 {{ index + 1 }}
               </td>
-              <template v-for="column in columns"  :key="column.field">
+              <template v-for="(column, ind) in columns" :key="column.field">
                 <td :style="{ width: column.width + 'px' }">
                   <template v-if="column.render">
-                    <!-- <vnodes
-                      :vnodes="column.render({ value: item[column.field] })"
-                    ></vnodes> -->
+                    <!-- {{ column.render(h, item[ind]) }} -->
+                    <cell-render
+                      :render="column.render" :column="column" :index="ind"
+                    ></cell-render>
                   </template>
                   <template v-else>
                     {{ item[column.field] }}
@@ -115,12 +119,27 @@
 
 <script>
 import GIcon from "../Icon/Icon.vue";
+import CellRender from './CellRender';
 export default {
   components: {
     GIcon,
+    components: CellRender,
     // vnodes: {
     //   functional: true,
-    //   render: (h, context) => context.props.vnodes,
+    //   props: {
+    //       render: Function,
+    //       column: Object,
+    //       index: Number
+    //   },
+    //   render: (h, data) => {
+    //     console.log(ctx,'asdfasdf');
+    //     console.log(data,'asdf');
+    //       const params = {
+    //           column: ctx.props.column,
+    //           index: ctx.props.index
+    //       };
+    //       return ctx.props.render(h, params);
+    //   }
     // },
   },
   name: "GuluTable",

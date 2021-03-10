@@ -1,6 +1,6 @@
 # Gulu UI for Vue 3
 
-[点击查看官网](https://frankfang.gitee.io/gulu-ui-website-1/#/)
+[点击查看官网]
 
 ## 运行步骤
 
@@ -18,7 +18,3 @@
 
 1. 运行 rollup -c
 2. 得到的 dist/lib 目录就是编译后的库文件所在目录
-
-## 视频教程
-
-https://zhuanlan.zhihu.com/p/260037106
